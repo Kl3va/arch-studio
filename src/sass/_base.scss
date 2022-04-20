@@ -6,13 +6,35 @@ $very-dark-blue: rgb(27, 29, 35);
 $dark-grey: rgb(96, 99, 109);
 $medium-grey: rgb(125, 130, 143);
 $light-grey: rgb(200, 204, 216);
-$very-light-grey: rgb(238, 239, 244);
+$very-light-grey: rgba(238, 239, 244, 1);
 $red: rgb(223, 86, 86);
 
 //Font-family
 $font-secondary: "Spartan", sans-serif;
 
 //Breakpoints
+
+//Typography
+.heading-large {
+  font-size: 13.33rem;
+  color: $very-light-grey;
+  font-weight: 700;
+}
+
+.heading-medium {
+  font-size: 5.33rem;
+  font-weight: 700;
+}
+
+.heading-small {
+  font-size: 3.73rem;
+  font-weight: 700;
+}
+
+.heading-smallest {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
 
 *,
 *::before,
@@ -24,7 +46,7 @@ $font-secondary: "Spartan", sans-serif;
 
 html {
   box-sizing: border-box;
-  font-size: 100%; //16px
+  font-size: 93.75%; //15px
   scroll-behavior: smooth;
 }
 
