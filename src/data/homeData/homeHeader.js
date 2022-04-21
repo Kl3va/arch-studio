@@ -24,10 +24,26 @@ import teamDesktop from "../../starter-code/assets/home/desktop/image-small-team
 import teamTablet from "../../starter-code/assets/home/tablet/image-small-team.jpg";
 import teamMobile from "../../starter-code/assets/home/mobile/image-small-team.jpg";
 
+//Images for featured section
+import imgDesolDesktop from "../../starter-code/assets/portfolio/desktop/image-del-sol.jpg";
+import imgDesolTablet from "../../starter-code/assets/portfolio/tablet/image-del-sol.jpg";
+import imgDesolMobile from "../../starter-code/assets/portfolio/mobile/image-del-sol.jpg";
+
+import imgTowerDesktop from "../../starter-code/assets/portfolio/desktop/image-228b.jpg";
+import imgTowerTablet from "../../starter-code/assets/portfolio/tablet/image-228b.jpg";
+import imgTowerMobile from "../../starter-code/assets/portfolio/mobile/image-228b.jpg";
+
+import imgPrototypeDesktop from "../../starter-code/assets/portfolio/desktop/image-prototype.jpg";
+import imgProrotypeTablet from "../../starter-code/assets/portfolio/tablet/image-prototype.jpg";
+import imgPrototypeMobile from "../../starter-code/assets/portfolio/mobile/image-prototype.jpg";
+
+//Navbar logo
+import navLogo from "../../starter-code/assets/logo.svg";
+
 //HEADER DATA
 export const header = {
   btnText: "See Our Portfolio",
-  btnGroupText: [01, 02, 03, 04],
+  btnGroupText: ["01", "02", "03", "04"],
   mainContents: [
     {
       heading: "Project Paramour",
@@ -85,26 +101,50 @@ export const about = {
 };
 
 export const featured = {
-  heading: "",
-  btnText: "",
+  heading: "Featured",
+  btnText: "See all",
   subContents: [
     {
-      img: null,
-      headingLarge: "",
-      headingSmall: "",
-      paragraph: "",
+      imgDesktop: imgDesolDesktop,
+      imgTablet: imgDesolTablet,
+      imgMobile: imgDesolMobile,
+      headingLarge: "1",
+      headingSmall: "Project Del Sol",
+      paragraph: "View All Projicts",
     },
     {
-      img: null,
-      headingLarge: "",
-      headingSmall: "",
-      paragraph: "",
+      imgDesktop: imgTowerDesktop,
+      imgTablet: imgTowerTablet,
+      imgMobile: imgTowerMobile,
+      headingLarge: "2",
+      headingSmall: "228B Tower",
+      paragraph: "View All Projects",
     },
     {
-      img: null,
-      headingLarge: "",
-      headingSmall: "",
-      paragraph: "",
+      imgDesktop: imgPrototypeDesktop,
+      imgTablet: imgProrotypeTablet,
+      imgMobile: imgPrototypeMobile,
+      headingLarge: "3",
+      headingSmall: "Le Prototype",
+      paragraph: "View All Projects",
+    },
+  ],
+};
+
+export const navbar = {
+  logo: navLogo,
+  navigation: [
+    {
+      link: "Portfolio",
+      page: "portfolio",
+    },
+    {
+      link: "About Us",
+      page: "about",
+    },
+    {
+      link: "Contact",
+      page: "contact",
     },
   ],
 };
