@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+//Navigation Component
 const Navbar = ({ logo, navigation }) => {
   return (
     <nav>
@@ -11,10 +12,8 @@ const Navbar = ({ logo, navigation }) => {
         {navigation.map((nav, index) => {
           const { link, page } = nav;
           return (
-            <li className="nav__items">
-              <Link key={index} to={page}>
-                {link}
-              </Link>
+            <li key={index} className="nav__items">
+              <Link to={page}>{link}</Link>
             </li>
           );
         })}

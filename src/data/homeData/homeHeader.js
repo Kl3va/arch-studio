@@ -42,10 +42,10 @@ import navLogo from "../../starter-code/assets/logo.svg";
 
 //HEADER DATA
 export const header = {
+  btnText: "See Our Portfolio",
   btnGroupText: ["01", "02", "03", "04"],
   mainContents: [
     {
-      btnText: "See Our Portfolio",
       heading: "Project Paramour",
       desktopImg: paramourDesktop,
       tabletImg: paramourTablet,
@@ -54,7 +54,6 @@ export const header = {
         "Project made for an art museum near Southwest London. Project Paramour is a statement of bold, modern architecture.",
     },
     {
-      btnText: "See Our Portfolio",
       heading: "Seraph Station",
       desktopImg: seraphDesktop,
       tabletImg: seraphTablet,
@@ -63,7 +62,6 @@ export const header = {
         "The Seraph Station project challenged us to design a unique station that would transport people through time. The result is a fresh and futuristic model inspired by space stations.",
     },
     {
-      btnText: "See Our Portfolio",
       heading: "Federal II Tower",
       desktopImg: federalDesktop,
       tabletImg: federalTablet,
@@ -72,7 +70,6 @@ export const header = {
         "A sequel theme project for a tower originally built in the 1800s. We achieved this with a striking look of brutal minimalism with modern touches.",
     },
     {
-      btnText: "See Our Portfolio",
       heading: "Trinity Bank Tower",
       desktopImg: trinityDesktop,
       tabletImg: trinityTablet,
@@ -134,6 +131,7 @@ export const featured = {
   ],
 };
 
+//Data for navigation bar
 export const navbar = {
   logo: navLogo,
   navigation: [
