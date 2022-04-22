@@ -10,7 +10,9 @@ const Home = () => {
   return (
     <>
       <Header {...header} />
-      <Welcome {...subHeader} />
+      <main>
+        <Welcome {...subHeader} />
+      </main>
     </>
   );
 };
