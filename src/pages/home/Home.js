@@ -2,9 +2,10 @@ import React from "react";
 //Components
 import Header from "./Header";
 import Welcome from "./Welcome";
+import HomeAbout from "./HomeAbout";
 
 //data
-import { header, subHeader } from "../../data/homeData/homeHeader";
+import { header, subHeader, about } from "../../data/homeData/homeData";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Header {...header} />
       <main>
         <Welcome {...subHeader} />
+        <HomeAbout {...about} />
       </main>
     </>
   );

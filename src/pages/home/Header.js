@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BsArrowRightShort } from "react-icons/bs";
+import Button from "../button";
 
 const Header = ({ btnText, btnGroupText, mainContents }) => {
   const [value, setValue] = useState(0);
@@ -13,22 +14,18 @@ const Header = ({ btnText, btnGroupText, mainContents }) => {
         <picture className="header-image">
           <source media="(max-width: 573px)" srcSet={tabletImg} />
           <source media="(max-width: 375px)" srcSet={mobileImg} />
-          <img loading="lazy" src={desktopImg} alt="project-img" />
+          <img loading="lazy" src={desktopImg} alt="project image" />
         </picture>
         <div>
-          <h1 className="heading-small">{heading}</h1>
+          <h1 className="heading-medium">{heading}</h1>
           <p className="text-secondary">{paragraph}</p>
-          <button className="btn-large">
-            {btnText} <BsArrowRightShort />
-          </button>
+          <Button className="btn-large" text={btnText}>
+            <BsArrowRightShort />
+          </Button>
         </div>
         <div className="tab-btns">
           {btnGroupText.map((btn, index) => {
-            return (
-              <button key={index} className="btn-small">
-                {btn}
-              </button>
-            );
+            return <Button key={index} className="btn-small" text={btn} />;
           })}
         </div>
       </div>

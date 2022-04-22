@@ -6,7 +6,7 @@ import Contact from "./pages/contact/Contact";
 import Portfolio from "./pages/portfolio/Portfolio";
 import Navbar from "./pages/home/Navbar";
 
-import { navbar } from "./data/homeData/homeHeader";
+import { navbar } from "./data/homeData/homeData";
 
 function App() {
   return (

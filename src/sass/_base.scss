@@ -63,6 +63,16 @@ picture {
   display: block;
 }
 
+.btn-large {
+  background-color: black;
+  color: white;
+}
+
+.btn-small {
+  background-color: black;
+  color: white;
+}
+
 body {
   background-color: $color-primary;
   font-family: $font-secondary;
