@@ -13,7 +13,7 @@ const Header = ({ btnText, btnGroupText, mainContents }) => {
         <picture className="header-image">
           <source media="(max-width: 573px)" srcSet={tabletImg} />
           <source media="(max-width: 375px)" srcSet={mobileImg} />
-          <img src={desktopImg} alt="project-img" />
+          <img loading="lazy" src={desktopImg} alt="project-img" />
         </picture>
         <div>
           <h1 className="heading-small">{heading}</h1>
