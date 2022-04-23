@@ -18,7 +18,7 @@ const Welcome = ({ headingLarge, headingSmall, texts, img }) => {
           </div>
         </div>
         <div>
-          <img loading="lazy" src={img} alt="welcome-img" />
+          <img loading="lazy" src={img} alt="welcome" />
         </div>
       </div>
     </section>

@@ -14,7 +14,7 @@ const Header = ({ btnText, btnGroupText, mainContents }) => {
         <picture className="header-image">
           <source media="(max-width: 573px)" srcSet={tabletImg} />
           <source media="(max-width: 375px)" srcSet={mobileImg} />
-          <img loading="lazy" src={desktopImg} alt="project image" />
+          <img loading="lazy" src={desktopImg} alt="project" />
         </picture>
         <div>
           <h1 className="heading-medium">{heading}</h1>

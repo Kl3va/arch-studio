@@ -110,7 +110,7 @@ export const featured = {
       imgMobile: imgDesolMobile,
       headingLarge: "1",
       headingSmall: "Project Del Sol",
-      paragraph: "View All Projicts",
+      paragraph: "View All Projects",
     },
     {
       imgDesktop: imgTowerDesktop,

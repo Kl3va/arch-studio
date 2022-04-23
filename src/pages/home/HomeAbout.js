@@ -9,7 +9,7 @@ const HomeAbout = ({ heading, btnText, desktopImg, tabletImg, mobileImg }) => {
         <picture className="home-about__image">
           <source media="(max-width: 573px)" srcSet={tabletImg} />
           <source media="(max-width: 375px)" srcSet={mobileImg} />
-          <img loading="lazy" src={desktopImg} alt="small ideas image" />
+          <img loading="lazy" src={desktopImg} alt="small ideas" />
         </picture>
         <div className="home-about__content">
           <h2 className="heading-small">{heading}</h2>

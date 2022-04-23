@@ -3,9 +3,15 @@ import React from "react";
 import Header from "./Header";
 import Welcome from "./Welcome";
 import HomeAbout from "./HomeAbout";
+import Featured from "./Featured";
 
 //data
-import { header, subHeader, about } from "../../data/homeData/homeData";
+import {
+  header,
+  subHeader,
+  about,
+  featured,
+} from "../../data/homeData/homeData";
 
 const Home = () => {
   return (
@@ -14,6 +20,7 @@ const Home = () => {
       <main>
         <Welcome {...subHeader} />
         <HomeAbout {...about} />
+        <Featured {...featured} />
       </main>
     </>
   );
