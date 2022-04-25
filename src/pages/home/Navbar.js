@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Navlinks from "./Navlinks";
 
 //Navigation Component
 const Navbar = ({ logo, navigation }) => {
@@ -8,16 +8,7 @@ const Navbar = ({ logo, navigation }) => {
       <div className="nav__logo">
         <img src={logo} alt="logo" />
       </div>
-      <ul className="nav__links">
-        {navigation.map((nav, index) => {
-          const { link, page } = nav;
-          return (
-            <li key={index} className="nav__items">
-              <Link to={page}>{link}</Link>
-            </li>
-          );
-        })}
-      </ul>
+      <Navlinks navigation={navigation} link="nav__link" items="nav__items" />
     </nav>
   );
 };

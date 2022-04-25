@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navlinks = () => {
+const Navlinks = ({ navigation, link, items }) => {
   return (
-    <ul className="nav__links">
+    <ul className={link}>
       {navigation.map((nav, index) => {
         const { link, page } = nav;
         return (
-          <li key={index} className="nav__items">
+          <li key={index} className={items}>
             <Link to={page}>{link}</Link>
           </li>
         );

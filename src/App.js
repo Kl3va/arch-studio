@@ -5,8 +5,9 @@ import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Portfolio from "./pages/portfolio/Portfolio";
 import Navbar from "./pages/home/Navbar";
+import Footer from "./pages/home/Footer";
 
-import { navbar } from "./data/homeData/homeData";
+import { navbar, footer } from "./data/homeData/homeData";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
+      <Footer {...footer} />
     </Router>
   );
 }

@@ -40,6 +40,9 @@ import imgPrototypeMobile from "../../starter-code/assets/portfolio/mobile/image
 //Navbar logo
 import navLogo from "../../starter-code/assets/logo.svg";
 
+//Footer Logo
+import footerLogo from "../../starter-code/assets/logo-footer.svg";
+
 //HEADER DATA
 export const header = {
   btnText: "See Our Portfolio",
@@ -148,4 +151,10 @@ export const navbar = {
       page: "contact",
     },
   ],
+};
+
+//Footer Data
+export const footer = {
+  btnText: "See Our Portfolio",
+  logo: footerLogo,
 };
