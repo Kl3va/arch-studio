@@ -16,12 +16,14 @@ $font-secondary: "Spartan", sans-serif;
 
 //Typography
 .heading-large {
-  font-size: 13.33rem;
+  //font-size: Clamp(5rem, calc(7vw + 1rem), 13rem);
+  font-size: calc(Clamp(5rem, 15vw + 1rem, 13rem));
   color: $very-light-grey;
   font-weight: 700;
 }
 
 .heading-medium {
+  // font-size: calc(Clamp(3.2rem, 7vw + 1rem, 5.33rem);
   font-size: 5.33rem;
   font-weight: 700;
 }
@@ -76,5 +78,20 @@ picture {
 body {
   background-color: $color-primary;
   font-family: $font-secondary;
-  line-height: 1.4;
+  line-height: 1.2;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns:
+    [full-start] minmax(2rem, 1fr) [center-start]
+    repeat(12, [column-start] minmax(0, 6.1rem) [column-end])
+    [center-end] minmax(2rem, 1fr) [full-end];
+
+  & > * {
+    grid-column: center-start / center-end;
+    grid-row: auto;
+    grid-row-gap: 2rem;
+  }
 }
