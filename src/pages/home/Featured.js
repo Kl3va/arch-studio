@@ -28,9 +28,9 @@ const Featured = ({ heading, btnText, subContents }) => {
               return (
                 <div key={index} className="featured-content">
                   <picture className="featured-content__img">
-                    <source media="(max-width: 573px)" srcSet={imgTablet} />
-                    <source media="(max-width: 375px)" srcSet={imgMobile} />
-                    <img loading="lazy" src={imgDesktop} alt="portfolio" />
+                    <source media="(min-width: 573px)" srcSet={imgDesktop} />
+                    <source media="(min-width: 375px)" srcSet={imgTablet} />
+                    <img loading="lazy" src={imgMobile} alt="portfolio" />
                   </picture>
                   <p className="featured-content__text">{headingLarge}</p>
                   <div className="featured-subcontent">

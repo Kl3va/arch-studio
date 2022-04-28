@@ -13,29 +13,44 @@ $red: rgb(223, 86, 86);
 $font-secondary: "Spartan", sans-serif;
 
 //Breakpoints
+$breakpoint-large: 78.5em;
+$breakpoint-small: 33.88em;
+
+//MIXINS
+@mixin imagestyle {
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
 
 //Typography
 .heading-large {
   //font-size: Clamp(5rem, calc(7vw + 1rem), 13rem);
-  font-size: calc(Clamp(5rem, 15vw + 1rem, 13rem));
+  font-size: clamp(4.8rem, calc(14vw + 0.8rem), 12.8rem);
   color: $very-light-grey;
   font-weight: 700;
 }
 
 .heading-medium {
-  // font-size: calc(Clamp(3.2rem, 7vw + 1rem, 5.33rem);
-  font-size: 5.33rem;
+  font-size: clamp(3rem, calc(8vw + 0.5rem), 5rem);
+  color: $color-primary;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(2.4rem, calc(5vw + 0.5rem), 3.5rem);
+  //font-size: 2.5rem;
   font-weight: 700;
 }
 
-.heading-small {
-  font-size: 3.73rem;
+h3 {
+  font-size: 1rem;
   font-weight: 700;
 }
 
-.heading-smallest {
-  font-size: 1.2rem;
-  font-weight: 700;
+p {
+  line-height: 1.56rem;
 }
 
 *,
@@ -68,26 +83,50 @@ picture {
 .btn-large {
   background-color: black;
   color: white;
+  //width: 16.8rem;
+  //height: 4.8rem;
+  padding: 1rem 2.1rem 1rem 2.4rem;
+  border: none;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: all ease 0.2s;
+
+  &:hover {
+    background-color: $dark-grey;
+  }
 }
 
 .btn-small {
   background-color: black;
   color: white;
+  padding: 2rem;
+  //width: 5.33rem;
+  //aspect-ratio: 1 / 1;
+  border: none;
+}
+
+.icon-arrow {
+  font-size: 3rem;
+  display: inline-block;
 }
 
 body {
   background-color: $color-primary;
   font-family: $font-secondary;
   line-height: 1.2;
+  font-weight: 500;
 }
 
 .container {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns:
-    [full-start] minmax(2rem, 1fr) [center-start]
+    [full-start] minmax(6rem, 1fr) [center-start]
     repeat(12, [column-start] minmax(0, 6.1rem) [column-end])
-    [center-end] minmax(2rem, 1fr) [full-end];
+    [center-end] minmax(6rem, 1fr) [full-end];
 
   & > * {
     grid-column: center-start / center-end;

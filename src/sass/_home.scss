@@ -1,4 +1,167 @@
-.header {
-  grid-column: column-start / column-end;
-  // grid-row: auto;
+//NAVIGATION LINKS
+@import "base";
+
+.nav {
+  display: flex;
+  gap: Max(5.25rem, calc(7vw + 0.5rem));
+  padding: 3.7rem 0;
+
+  &__logo {
+    flex: 0 auto;
+  }
+
+  &__link {
+    flex: 1 1 80%;
+    display: flex;
+    gap: 3.7rem;
+    align-items: center;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      display: none;
+    }
+  }
+
+  &__items {
+    list-style: none;
+
+    & a {
+      text-decoration: none;
+      font-weight: 700;
+      display: block;
+      color: $medium-grey;
+      transition: color ease-in 0.2s;
+
+      &:hover {
+        color: $very-dark-blue;
+      }
+    }
+  }
+}
+
+//HEADER SECTION
+
+.packed {
+  display: grid;
+
+  & > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+}
+
+.header-img {
+  /*width: 100%;
+  object-fit: cover;
+  z-index: 1;
+  aspect-ratio: 1 / 1.25; */
+  @include imagestyle;
+  aspect-ratio: 1 / 1.25;
+}
+
+.heading-contents {
+  max-width: 36.9rem;
+  z-index: 10;
+  height: fit-content;
+  align-self: center;
+  margin-left: 10%;
+}
+
+.text-secondary {
+  color: $color-primary;
+  max-width: 35ch;
+  margin-bottom: 2.2rem;
+}
+
+.blank {
+  background-color: #000;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  z-index: 2;
+}
+
+.tab-btns {
+  display: none;
+  z-index: 100;
+  align-self: end;
+  transform: translateX(-5.17rem);
+
+  @media only screen and (min-width: $breakpoint-large) {
+    display: block;
+  }
+
+  & > *:not(:first-child) {
+    background-color: $color-primary;
+    color: $medium-grey;
+
+    &:hover {
+      background-color: $very-light-grey;
+    }
+  }
+}
+
+//WELCOME SECTION
+.section--welcome {
+  margin-block: 4rem 6.9rem;
+}
+
+.welcome {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-column-gap: 1rem;
+
+  &__heading {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+
+    transform: translateY(2rem);
+
+    @media only screen and (max-width: $breakpoint-small) {
+      display: none;
+    }
+  }
+
+  &__contents {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    justify-self: end;
+
+    max-width: 28rem;
+
+    & .welcome-subheading {
+      margin-bottom: 2.5rem;
+    }
+
+    & .welcome-text {
+      & > *:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__img {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    justify-self: end;
+  }
+}
+
+//HOME-ABOUT SECTION
+.home-about {
+  &__img {
+    @include imagestyle;
+    height: 35rem;
+  }
+
+  &__content {
+    max-width: 26.8rem;
+    height: fit-content;
+    z-index: 5;
+  }
+
+  &__heading {
+    color: $color-primary;
+    width: 19rem;
+  }
 }

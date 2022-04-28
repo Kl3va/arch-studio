@@ -10,22 +10,42 @@ const Header = ({ btnText, btnGroupText, mainContents }) => {
 
   return (
     <header className="header">
-      <div className="main-header">
-        <picture className="header-image">
-          <source media="(max-width: 573px)" srcSet={tabletImg} />
-          <source media="(max-width: 375px)" srcSet={mobileImg} />
-          <img loading="lazy" src={desktopImg} alt="project" />
+      <div className="main-header packed">
+        <picture className="header-picture">
+          <source media="(min-width: 573px)" srcSet={desktopImg} />
+          <source media="(min-width: 375px)" srcSet={tabletImg} />
+          <img
+            loading="lazy"
+            src={mobileImg}
+            alt="project"
+            className="header-img"
+          />
         </picture>
-        <div>
+        <div className="heading-contents">
           <h1 className="heading-medium">{heading}</h1>
           <p className="text-secondary">{paragraph}</p>
           <Button className="btn-large" text={btnText}>
-            <BsArrowRightShort />
+            <BsArrowRightShort className="icon-arrow" />
           </Button>
         </div>
+        <div className="blank"></div>
         <div className="tab-btns">
           {btnGroupText.map((btn, index) => {
-            return <Button key={index} className="btn-small" text={btn} />;
+            return (
+              /* <Button
+                key={index}
+                className="btn-small"
+                text={btn}
+                onClick={() => setValue(index)}
+              /> */
+              <button
+                className="btn-small"
+                key={index}
+                onClick={() => setValue(index)}
+              >
+                {btn}
+              </button>
+            );
           })}
         </div>
       </div>

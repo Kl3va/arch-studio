@@ -2,11 +2,11 @@ import React from "react";
 
 const Welcome = ({ headingLarge, headingSmall, texts, img }) => {
   return (
-    <section className="section">
+    <section className="section section--welcome">
       <div className="welcome">
-        <h1 className="heading-large">{headingLarge}</h1>
-        <div>
-          <h2 className="heading-small">{headingSmall}</h2>
+        <h1 className="heading-large welcome__heading">{headingLarge}</h1>
+        <div className="welcome__contents">
+          <h2 className="heading-small welcome-subheading">{headingSmall}</h2>
           <div className="welcome-text">
             {texts.map((text, index) => {
               return (
@@ -17,7 +17,7 @@ const Welcome = ({ headingLarge, headingSmall, texts, img }) => {
             })}
           </div>
         </div>
-        <div>
+        <div className="welcome__img">
           <img loading="lazy" src={img} alt="welcome" />
         </div>
       </div>

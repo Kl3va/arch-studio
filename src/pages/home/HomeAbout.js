@@ -5,16 +5,22 @@ import { BsArrowRightShort } from "react-icons/bs";
 const HomeAbout = ({ heading, btnText, desktopImg, tabletImg, mobileImg }) => {
   return (
     <section className="section">
-      <div className="home-about">
-        <picture className="home-about__image">
-          <source media="(max-width: 573px)" srcSet={tabletImg} />
-          <source media="(max-width: 375px)" srcSet={mobileImg} />
-          <img loading="lazy" src={desktopImg} alt="small ideas" />
+      <div className="home-about packed">
+        <picture className="home-about__picture">
+          <source media="(min-width: 573px)" srcSet={desktopImg} />
+          <source media="(min-width: 375px)" srcSet={tabletImg} />
+          <img
+            loading="lazy"
+            src={mobileImg}
+            alt="small ideas"
+            className="home-about__img"
+          />
         </picture>
+        <div className="blank"></div>
         <div className="home-about__content">
-          <h2 className="heading-small">{heading}</h2>
-          <Button className="btn-small" text={btnText}>
-            <BsArrowRightShort />
+          <h2 className="home-about__heading">{heading}</h2>
+          <Button className="btn-large" text={btnText}>
+            <BsArrowRightShort className="icon-arrow" />
           </Button>
         </div>
       </div>
