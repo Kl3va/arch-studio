@@ -17,7 +17,7 @@ const Footer = ({ btnText, logo }) => {
           items="footer__items"
         />
         <Button className="btn-large" text={btnText}>
-          <BsArrowRightShort />
+          <BsArrowRightShort className="icon-arrow" />
         </Button>
       </div>
     </footer>

@@ -55,7 +55,9 @@
   z-index: 1;
   aspect-ratio: 1 / 1.25; */
   @include imagestyle;
-  aspect-ratio: 1 / 1.25;
+  //aspect-ratio: 1 / 1.25;
+  height: 45rem;
+  filter: brightness(75%);
 }
 
 .heading-contents {
@@ -72,13 +74,6 @@
   margin-bottom: 2.2rem;
 }
 
-.blank {
-  background-color: #000;
-  mix-blend-mode: normal;
-  opacity: 0.3;
-  z-index: 2;
-}
-
 .tab-btns {
   display: none;
   z-index: 100;
@@ -87,15 +82,6 @@
 
   @media only screen and (min-width: $breakpoint-large) {
     display: block;
-  }
-
-  & > *:not(:first-child) {
-    background-color: $color-primary;
-    color: $medium-grey;
-
-    &:hover {
-      background-color: $very-light-grey;
-    }
   }
 }
 
@@ -152,16 +138,109 @@
   &__img {
     @include imagestyle;
     height: 35rem;
+    filter: brightness(75%);
   }
 
   &__content {
-    max-width: 26.8rem;
+    max-width: 27.8rem;
     height: fit-content;
     z-index: 5;
+    align-self: center;
+    margin-left: 10%;
   }
 
   &__heading {
     color: $color-primary;
-    width: 19rem;
+    width: 9ch;
+    line-height: 1.2;
+    word-break: normal;
+    margin-bottom: 3rem;
+  }
+}
+
+//FEATURED SECTION
+.section--featured {
+  margin: 12.5rem 0;
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+
+  & > :nth-child(2) {
+    justify-self: end;
+    //grid-row: 3 / 4;
+    //grid-column: 1 / -1;
+  }
+
+  &__heading {
+    align-self: end;
+  }
+
+  &__contents {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 2rem;
+    margin-top: 4rem;
+  }
+
+  &-subcontent {
+    &__heading {
+      font-size: 12.5rem;
+      font-weight: 700;
+      justify-self: end;
+      height: fit-content;
+      color: rgba($color-primary, 0.5);
+      z-index: 50;
+    }
+
+    &__picture img {
+      filter: brightness(80%);
+      @include imagestyle;
+    }
+  }
+
+  &-minicontent {
+    color: $color-primary;
+    align-self: end;
+    margin: 0 0 2.5rem 2.5rem;
+    z-index: 100;
+
+    &__text {
+      opacity: 0.75;
+    }
+  }
+}
+
+//FOOTER SECTION
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    background-color: $very-dark-blue;
+    width: Min(20%, 12.5rem); //18%
+    aspect-ratio: 1 / 1;
+
+    & img {
+      width: Max(3.5rem, 60%);
+    }
+  }
+
+  &__link {
+    list-style: none;
+    display: flex;
+  }
+
+  &__items {
+    & a {
+      text-decoration: none;
+      display: block;
+    }
   }
 }

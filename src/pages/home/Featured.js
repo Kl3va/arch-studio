@@ -4,15 +4,13 @@ import Button from "../button";
 
 const Featured = ({ heading, btnText, subContents }) => {
   return (
-    <section className="section">
+    <section className="section section--featured">
       <div className="featured">
-        <div className="featured__heading">
-          <h2 className="heading-small">{heading}</h2>
-          <Button className="btn-small" text={btnText}>
-            <BsArrowRightShort />
-          </Button>
-        </div>
-        <div>
+        <h2 className="heading-small featured__heading">{heading}</h2>
+        <Button className="btn-large" text={btnText}>
+          <BsArrowRightShort className="icon-arrow" />
+        </Button>
+        <div className="featured__contents">
           {subContents.map(
             (
               {
@@ -26,16 +24,18 @@ const Featured = ({ heading, btnText, subContents }) => {
               index
             ) => {
               return (
-                <div key={index} className="featured-content">
-                  <picture className="featured-content__img">
+                <div key={index} className="featured-subcontent packed">
+                  <picture className="featured-subcontent__picture">
                     <source media="(min-width: 573px)" srcSet={imgDesktop} />
                     <source media="(min-width: 375px)" srcSet={imgTablet} />
                     <img loading="lazy" src={imgMobile} alt="portfolio" />
                   </picture>
-                  <p className="featured-content__text">{headingLarge}</p>
-                  <div className="featured-subcontent">
-                    <h3 className="heading-smallest">{headingSmall}</h3>
-                    <p className="featured-subcontent__text">{paragraph}</p>
+                  <h3 className="featured-subcontent__heading">
+                    {headingLarge}
+                  </h3>
+                  <div className="featured-minicontent">
+                    <h4 className="heading-smallest">{headingSmall}</h4>
+                    <p className="featured-minicontent__text">{paragraph}</p>
                   </div>
                 </div>
               );

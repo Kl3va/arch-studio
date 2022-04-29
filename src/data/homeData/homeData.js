@@ -96,7 +96,7 @@ export const subHeader = {
 };
 
 export const about = {
-  heading: "Small team,big ideas",
+  heading: "Small team, big ideas",
   btnText: "About Us",
   desktopImg: teamDesktop,
   tabletImg: teamTablet,

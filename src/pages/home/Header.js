@@ -28,7 +28,6 @@ const Header = ({ btnText, btnGroupText, mainContents }) => {
             <BsArrowRightShort className="icon-arrow" />
           </Button>
         </div>
-        <div className="blank"></div>
         <div className="tab-btns">
           {btnGroupText.map((btn, index) => {
             return (
@@ -39,8 +38,10 @@ const Header = ({ btnText, btnGroupText, mainContents }) => {
                 onClick={() => setValue(index)}
               /> */
               <button
-                className="btn-small"
                 key={index}
+                className={`btn-small ${
+                  index === value && "btn-small--active"
+                }`}
                 onClick={() => setValue(index)}
               >
                 {btn}

@@ -16,7 +16,6 @@ const HomeAbout = ({ heading, btnText, desktopImg, tabletImg, mobileImg }) => {
             className="home-about__img"
           />
         </picture>
-        <div className="blank"></div>
         <div className="home-about__content">
           <h2 className="home-about__heading">{heading}</h2>
           <Button className="btn-large" text={btnText}>
