@@ -11,11 +11,13 @@ const Footer = ({ btnText, logo }) => {
         <div className="footer__logo">
           <img src={logo} alt="footer" />
         </div>
-        <Navlinks
-          navigation={navbar.navigation}
-          link="footer__link"
-          items="footer__items"
-        />
+        <div className="footer__content">
+          <Navlinks
+            navigation={navbar.navigation}
+            link="footer__link"
+            items="footer__items"
+          />
+        </div>
         <Button className="btn-large" text={btnText}>
           <BsArrowRightShort className="icon-arrow" />
         </Button>

@@ -219,13 +219,41 @@
 
 //FOOTER SECTION
 .footer {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(7.5rem, 19%) minmax(min-content, 49rem) minmax(
+      min-content,
+      max-content
+    );
+
+  & > * + * {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  &__content {
+    //flex: 0 1 75%;
+    background-color: $very-light-grey;
+
+    display: flex;
+  }
+
+  & > .btn-large {
+    align-self: center;
+    justify-self: end;
+    margin-right: -9vw;
+
+    //position: fixed;
+    //margin-left: 10rem;
+  }
 
   &__logo {
+    //flex: 1 1 0;
     background-color: $very-dark-blue;
-    width: Min(20%, 12.5rem); //18%
+    //  width: Min(20%, 12.5rem); //18%
     aspect-ratio: 1 / 1;
+
+    display: grid;
+    place-items: center;
 
     & img {
       width: Max(3.5rem, 60%);
@@ -235,12 +263,22 @@
   &__link {
     list-style: none;
     display: flex;
+    //flex-basis: 55%;
+    //justify-content: space-evenly;
+    // align-items: center;
   }
 
   &__items {
     & a {
       text-decoration: none;
+      font-weight: 700;
       display: block;
+      color: $medium-grey;
+      transition: color ease-in 0.2s;
+
+      &:hover {
+        color: $very-dark-blue;
+      }
     }
   }
 }
