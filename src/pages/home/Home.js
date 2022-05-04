@@ -4,6 +4,7 @@ import Header from "./Header";
 import Welcome from "./Welcome";
 import HomeAbout from "./HomeAbout";
 import Featured from "./Featured";
+import AsideInfo from "./AsideInfo";
 
 //data
 import {
@@ -16,6 +17,7 @@ import {
 const Home = () => {
   return (
     <>
+      <AsideInfo text="home" />
       <Header {...header} />
       <main>
         <Welcome {...subHeader} />

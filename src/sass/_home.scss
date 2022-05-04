@@ -1,6 +1,33 @@
 //NAVIGATION LINKS
 @import "base";
 
+//Text at the top of page
+.aside-info {
+  position: fixed;
+  top: 0;
+  left: 3rem;
+  height: 12rem;
+  width: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  //align-items: center;
+
+  & .empty {
+    height: 6.5rem;
+    width: 0.1rem;
+    background-color: $light-grey;
+  }
+
+  & p {
+    text-transform: uppercase;
+    letter-spacing: 1.56rem;
+    transform-origin: 10% 0.6rem;
+    transform: rotate(90deg);
+  }
+}
+
 .nav {
   display: flex;
   gap: Max(5.25rem, calc(7vw + 0.5rem));
