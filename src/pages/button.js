@@ -1,10 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Button = ({ className, text, children }) => {
+const Button = ({ className, text, children, page }) => {
   return (
     <button className={className}>
-      {text}
-      {children}
+      <Link to={`/${page}`}>
+        {text}
+        {children}
+      </Link>
     </button>
   );
 };

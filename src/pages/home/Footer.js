@@ -3,11 +3,9 @@ import Button from "../button";
 import { BsArrowRightShort } from "react-icons/bs";
 import Navlinks from "./Navlinks";
 import { navbar } from "../../data/homeData/homeData";
-//import { useNavigate } from "react-router-dom";
-import useNavigation from "./hooks";
 
 const Footer = ({ btnText, logo }) => {
-  const { navigate } = useNavigation();
+  const { page } = navbar.navigation[0];
   return (
     <footer>
       <div className="footer">
@@ -21,13 +19,7 @@ const Footer = ({ btnText, logo }) => {
             items="footer__items"
           />
 
-          <Button
-            className="btn-large"
-            text={btnText}
-            onClick={() => {
-              navigate("/portfolio");
-            }}
-          >
+          <Button className="btn-large" text={btnText} page={page}>
             <BsArrowRightShort className="icon-arrow" />
           </Button>
         </div>

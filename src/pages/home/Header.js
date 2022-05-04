@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import { BsArrowRightShort } from "react-icons/bs";
 import Button from "../button";
+import { navbar } from "../../data/homeData/homeData";
 
 const Header = ({ btnText, btnGroupText, mainContents }) => {
+  //Tab switching
   const [value, setValue] = useState(0);
+
+  //Navigating to the portfolio page
+  const { page } = navbar.navigation[0];
 
   const { heading, desktopImg, tabletImg, mobileImg, paragraph } =
     mainContents[value];
@@ -24,7 +29,7 @@ const Header = ({ btnText, btnGroupText, mainContents }) => {
         <div className="heading-contents">
           <h1 className="heading-medium">{heading}</h1>
           <p className="text-secondary">{paragraph}</p>
-          <Button className="btn-large" text={btnText}>
+          <Button className="btn-large" text={btnText} page={page}>
             <BsArrowRightShort className="icon-arrow" />
           </Button>
         </div>

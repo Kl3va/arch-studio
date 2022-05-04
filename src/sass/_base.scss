@@ -84,16 +84,19 @@ picture {
 .btn-large {
   background-color: black;
   color: white;
-  //width: 16.8rem;
-  //height: 4.8rem;
   padding: 1rem 2.1rem 1rem 2.4rem;
   border: none;
   text-align: center;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
   transition: all ease 0.2s;
+
+  & a {
+    color: inherit;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 
   &:hover {
     background-color: $dark-grey;

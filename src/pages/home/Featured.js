@@ -1,13 +1,17 @@
 import React from "react";
 import { BsArrowRightShort } from "react-icons/bs";
 import Button from "../button";
+import { navbar } from "../../data/homeData/homeData";
 
 const Featured = ({ heading, btnText, subContents }) => {
+  //Navigating to the portfolio page
+  const { page } = navbar.navigation[0];
+
   return (
     <section className="section section--featured">
       <div className="featured">
         <h2 className="heading-small featured__heading">{heading}</h2>
-        <Button className="btn-large" text={btnText}>
+        <Button className="btn-large" text={btnText} page={page}>
           <BsArrowRightShort className="icon-arrow" />
         </Button>
         <div className="featured__contents">

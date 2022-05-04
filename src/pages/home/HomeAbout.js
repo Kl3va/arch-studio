@@ -1,8 +1,12 @@
 import React from "react";
 import Button from "../button";
 import { BsArrowRightShort } from "react-icons/bs";
+import { navbar } from "../../data/homeData/homeData";
 
 const HomeAbout = ({ heading, btnText, desktopImg, tabletImg, mobileImg }) => {
+  //Navigating to the about page
+  const { page } = navbar.navigation[1];
+
   return (
     <section className="section">
       <div className="home-about packed">
@@ -18,7 +22,7 @@ const HomeAbout = ({ heading, btnText, desktopImg, tabletImg, mobileImg }) => {
         </picture>
         <div className="home-about__content">
           <h2 className="home-about__heading">{heading}</h2>
-          <Button className="btn-large" text={btnText}>
+          <Button className="btn-large" text={btnText} page={page}>
             <BsArrowRightShort className="icon-arrow" />
           </Button>
         </div>
