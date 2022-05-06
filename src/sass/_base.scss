@@ -13,7 +13,11 @@ $red: rgb(223, 86, 86);
 $font-secondary: "Spartan", sans-serif;
 
 //Breakpoints
-$breakpoint-large: 78.5em;
+$breakpoint-largest: 78.5em; //1256px
+$breakpoint-larger: 62.5em; //1000px
+$breakpoint-large: 50em; //800px
+$breakpoint-medium: 46.8em; //750px
+$breakpoint-mid: 43.75em; //700px
 $breakpoint-small: 33.88em;
 
 //MIXINS
@@ -85,7 +89,7 @@ picture {
 .btn-large {
   background-color: black;
   color: white;
-  padding: 1rem 2.1rem 1rem 2.4rem;
+  padding: 0.7rem 1.7rem 0.7rem 1.8rem;
   border: none;
   text-align: center;
   transition: all ease 0.2s;
@@ -137,19 +141,4 @@ body {
   line-height: 1.2;
   font-weight: 500;
   color: $dark-grey;
-}
-
-.container {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns:
-    [full-start] minmax(6rem, 1fr) [center-start]
-    repeat(12, [column-start] minmax(0, 6.1rem) [column-end])
-    [center-end] minmax(6rem, 1fr) [full-end];
-
-  & > * {
-    grid-column: center-start / center-end;
-    grid-row: auto;
-    grid-row-gap: 2rem;
-  }
 }

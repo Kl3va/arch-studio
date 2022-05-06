@@ -30,7 +30,7 @@ const Featured = ({ heading, btnText, subContents }) => {
               return (
                 <div key={index} className="featured-subcontent packed">
                   <picture className="featured-subcontent__picture">
-                    <source media="(min-width: 573px)" srcSet={imgDesktop} />
+                    <source media="(min-width: 801px)" srcSet={imgDesktop} />
                     <source media="(min-width: 375px)" srcSet={imgTablet} />
                     <img loading="lazy" src={imgMobile} alt="portfolio" />
                   </picture>

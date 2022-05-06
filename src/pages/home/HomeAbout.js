@@ -8,7 +8,7 @@ const HomeAbout = ({ heading, btnText, desktopImg, tabletImg, mobileImg }) => {
   const { page } = navbar.navigation[1];
 
   return (
-    <section className="section">
+    <section className="section section--about">
       <div className="home-about packed">
         <picture className="home-about__picture">
           <source media="(min-width: 573px)" srcSet={desktopImg} />

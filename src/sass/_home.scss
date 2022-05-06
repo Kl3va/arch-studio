@@ -8,6 +8,11 @@
   left: 3rem;
   height: 12rem;
   width: 2rem;
+  transition: display ease-out 0.2s;
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    display: none;
+  }
 
   display: flex;
   flex-direction: column;
@@ -65,6 +70,17 @@
   }
 }
 
+//CONTENT IN THE CENTER
+.aside-nav,
+.header,
+.footer-main {
+  margin-inline: 6rem;
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    margin-inline: 2rem;
+  }
+}
+
 //HEADER SECTION
 
 .packed {
@@ -107,13 +123,39 @@
   align-self: end;
   transform: translateX(-5.17rem);
 
-  @media only screen and (min-width: $breakpoint-large) {
+  @media only screen and (min-width: $breakpoint-largest) {
     display: block;
   }
 }
 
+//MAIN CONTENT
+.main {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start]
+    repeat(12, [column-start] minmax(0, 6.1rem) [column-end])
+    [center-end] minmax(6rem, 1fr) [full-end];
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    grid-template-columns:
+      [full-start] 2rem [center-start]
+      repeat(12, [column-start] minmax(0, 6.1rem) [column-end])
+      [center-end] 2rem [full-end];
+  }
+  //grid-row-gap: 2rem;
+
+  /* & > *:not(:nth-child(5)) {
+    grid-column: center-start / center-end;
+    grid-row: auto;
+    grid-row-gap: 2rem;
+  } */
+}
+
 //WELCOME SECTION
 .section--welcome {
+  grid-column: center-start / center-end;
+  grid-row: 1 / 2;
   margin-block: 4rem 6.9rem;
 }
 
@@ -129,7 +171,12 @@
 
     transform: translateY(2rem);
 
-    @media only screen and (max-width: $breakpoint-small) {
+    @media only screen and (max-width: $breakpoint-larger) {
+      margin-left: -2rem;
+      transform: translateY(0);
+    }
+
+    @media only screen and (max-width: $breakpoint-medium) {
       display: none;
     }
   }
@@ -141,8 +188,18 @@
 
     max-width: 28rem;
 
+    @media only screen and (max-width: $breakpoint-larger) {
+      grid-column: 1 / -1;
+      justify-self: start;
+      max-width: max-content;
+    }
+
     & .welcome-subheading {
       margin-bottom: 2.5rem;
+
+      @media only screen and (max-width: $breakpoint-larger) {
+        max-width: 25rem;
+      }
     }
 
     & .welcome-text {
@@ -157,10 +214,23 @@
     grid-row: 2 / 3;
 
     justify-self: end;
+
+    & img {
+      margin-top: -4rem;
+
+      @media only screen and (max-width: $breakpoint-larger) {
+        display: none;
+      }
+    }
   }
 }
 
 //HOME-ABOUT SECTION
+.section--about {
+  grid-column: center-start / center-end;
+  grid-row: 2 / 3;
+}
+
 .home-about {
   &__img {
     @include imagestyle;
@@ -187,6 +257,8 @@
 
 //FEATURED SECTION
 .section--featured {
+  grid-column: center-start / center-end;
+  grid-row: 3 / 4;
   margin: 12.5rem 0;
 }
 
@@ -214,6 +286,12 @@
     grid-template-rows: auto;
     column-gap: 2rem;
     margin-top: 4rem;
+
+    @media only screen and (max-width: $breakpoint-large) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.5rem;
+    }
   }
 
   &-subcontent {
@@ -224,18 +302,27 @@
       height: fit-content;
       color: rgba($color-primary, 0.5);
       z-index: 50;
+
+      @media only screen and (max-width: $breakpoint-medium) {
+        display: none;
+      }
     }
 
     &__picture img {
       filter: brightness(80%);
       @include imagestyle;
+
+      @media only screen and (max-width: $breakpoint-large) {
+        height: 100%;
+      }
     }
   }
 
   &-minicontent {
     color: $color-primary;
     align-self: end;
-    margin: 0 0 2.5rem 2.5rem;
+    //margin: 0 0 2.5rem 2.5rem;
+    margin: 0 0 3vw 3vw;
     z-index: 100;
 
     &__text {
@@ -245,20 +332,39 @@
 }
 
 //FOOTER SECTION
+.footer-main {
+  @media only screen and (max-width: $breakpoint-larger) {
+    margin-inline: 0;
+  }
+}
+
 .footer {
   display: flex;
-  // grid-template-columns: minmax(7.5rem, 19%) minmax(min-content, 49rem) minmax(
-  // min-content,
-  // max-content
-  // );
 
-  /*& > * + * {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-  } */
+  @media only screen and (max-width: $breakpoint-mid) {
+    flex-direction: column;
+    background-color: $very-light-grey;
+    height: fit-content;
+
+    & > *:first-child {
+      align-self: center;
+    }
+  }
 
   &__content {
     flex: 2 1;
+
+    display: grid;
+
+    & > * {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    @media only screen and (max-width: $breakpoint-mid) {
+      display: flex;
+      flex-direction: column;
+    }
 
     //display: flex;
     //justify-content: space-between;
@@ -279,7 +385,7 @@
   &__logo {
     //flex: 1 1 0;
     background-color: $very-dark-blue;
-    width: Min(20%, 12.5rem); //18%
+    width: 14%; //18%
     aspect-ratio: 1 / 1;
 
     display: grid;
@@ -304,6 +410,10 @@
     //flex-basis: 55%;
     //justify-content: space-evenly;
     // align-items: center;
+
+    @media only screen and (max-width: $breakpoint-mid) {
+      flex-direction: column;
+    }
   }
 
   &__items {

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 //Navigation Component
 const Navbar = ({ logo, navigation }) => {
   return (
-    <aside>
+    <aside className="aside-nav">
       <nav className="nav">
         <div className="nav__logo">
           <Link to="/">

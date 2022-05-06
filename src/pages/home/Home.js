@@ -19,7 +19,7 @@ const Home = () => {
     <>
       <AsideInfo text="home" />
       <Header {...header} />
-      <main>
+      <main className="main">
         <Welcome {...subHeader} />
         <HomeAbout {...about} />
         <Featured {...featured} />

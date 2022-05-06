@@ -86,7 +86,7 @@ export const header = {
 //Sub header section
 export const subHeader = {
   headingLarge: "Welcome",
-  headingSmall: " Welcome to Arch Studio",
+  headingSmall: " Welcome to  Arch Studio",
   texts: [
     "We have a unique network and skillset to help bring your projects to life. Our smallteam of highly skilled individuals combined with our large network put us in a strong position to deliver exceptional results.",
     "Over the past 10 years, we have worked on all kinds of projects. From stations to high-rise buildings, we create spaces that inspire and delight",
