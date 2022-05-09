@@ -385,11 +385,15 @@
   &__logo {
     //flex: 1 1 0;
     background-color: $very-dark-blue;
-    width: 14%; //18%
+    width: clamp(7.5rem, 14%, 12.5rem); //18%
     aspect-ratio: 1 / 1;
 
     display: grid;
     place-items: center;
+
+    @media only screen and (max-width: $breakpoint-mid) {
+      margin-top: -3.5rem;
+    }
 
     & img {
       width: Max(3.5rem, 60%);
@@ -413,6 +417,10 @@
 
     @media only screen and (max-width: $breakpoint-mid) {
       flex-direction: column;
+      //padding-left: 0;
+      align-self: center;
+      row-gap: 1rem;
+      padding: 2rem 0;
     }
   }
 
