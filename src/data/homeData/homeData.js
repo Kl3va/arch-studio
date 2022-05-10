@@ -95,6 +95,7 @@ export const subHeader = {
   img: welcomeImg,
 };
 
+//About section data
 export const about = {
   heading: "Small team, big ideas",
   btnText: "About Us",
@@ -103,6 +104,7 @@ export const about = {
   mobileImg: teamMobile,
 };
 
+//Featured section data
 export const featured = {
   heading: "Featured",
   btnText: "See all",
