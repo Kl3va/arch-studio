@@ -1,14 +1,16 @@
 import React from "react";
 import AsideInfo from "../home/AsideInfo";
 import AboutHeader from "./AboutHeader";
+import AboutHeritage from "./AboutHeritage";
+import { aboutHeroSection, heritage } from "../../data/aboutData/aboutData";
 
 const About = () => {
   return (
     <>
       <AsideInfo text="about" />
-      <AboutHeader />
+      <AboutHeader {...aboutHeroSection} />
       <main>
-        <h3>jh</h3>
+        <AboutHeritage {...heritage} />
       </main>
     </>
   );
