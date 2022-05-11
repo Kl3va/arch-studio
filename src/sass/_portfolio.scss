@@ -5,19 +5,30 @@
   //max-width: 69.375rem;
   margin-inline: 6rem;
   margin-block: 0 10rem;
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    margin-inline: 2rem;
+  }
 }
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-template-rows: auto;
-  grid-gap: 1.5rem 1.87rem;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1.87rem;
+
+  @media only screen and (min-width: $breakpoint-smallest) {
+    grid-template-columns: repeat(auto-fit, minmax(21.875rem, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 1.87rem 1.5rem;
+  }
 }
 
 .portfolio-projects {
   &__picture {
-    @include imagestyle();
-    filter: brightness(85%);
+    & img {
+      @include imagestyle();
+      filter: brightness(85%);
+    }
   }
 
   &__minicontent {
