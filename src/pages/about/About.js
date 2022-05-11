@@ -1,10 +1,16 @@
 import React from "react";
+import AsideInfo from "../home/AsideInfo";
+import AboutHeader from "./AboutHeader";
 
 const About = () => {
   return (
-    <div>
-      <p>About</p>
-    </div>
+    <>
+      <AsideInfo text="about" />
+      <AboutHeader />
+      <main>
+        <h3>jh</h3>
+      </main>
+    </>
   );
 };
 
