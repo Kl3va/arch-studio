@@ -2,7 +2,12 @@ import React from "react";
 import AsideInfo from "../home/AsideInfo";
 import AboutHeader from "./AboutHeader";
 import AboutHeritage from "./AboutHeritage";
-import { aboutHeroSection, heritage } from "../../data/aboutData/aboutData";
+import AboutLeaders from "./AboutLeaders";
+import {
+  aboutHeroSection,
+  heritage,
+  leaders,
+} from "../../data/aboutData/aboutData";
 
 const About = () => {
   return (
@@ -11,6 +16,7 @@ const About = () => {
       <AboutHeader {...aboutHeroSection} />
       <main>
         <AboutHeritage {...heritage} />
+        <AboutLeaders {...leaders} />
       </main>
     </>
   );
