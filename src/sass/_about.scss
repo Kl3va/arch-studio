@@ -6,3 +6,123 @@
   height: 1px;
   background-color: $light-grey;
 }
+
+.content-box {
+  margin-inline: 2rem;
+  max-width: 100%;
+}
+
+//HEADER SECTION
+.about-hero {
+  &__picture {
+    & > img {
+      @include imagestyle();
+    }
+  }
+}
+
+.about-content {
+  width: 90%;
+  position: relative;
+  margin-top: -2rem;
+  z-index: 3;
+  background-color: $color-primary;
+  padding-top: 4.68rem;
+  padding-left: 2rem;
+
+  & > .dash {
+    display: none;
+  }
+
+  &__heading {
+    display: none;
+  }
+}
+
+.about-minicontent {
+  &__heading-small {
+    margin-bottom: 0.5rem;
+  }
+
+  &__text {
+  }
+}
+
+//////////////MAIN CONTENT
+//HERITAGE SECTION
+.section--heritage {
+  margin: 4.5rem 0;
+}
+
+.heritage {
+  &__box {
+    & > .dash {
+      margin-bottom: 4.25rem;
+    }
+  }
+
+  &__heading {
+    max-width: 14.5rem;
+    margin-bottom: 1.8rem;
+  }
+
+  &__text-group {
+  }
+
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__img-box {
+    display: none;
+    & > img {
+    }
+  }
+}
+
+//LEADERSHIP SECTION
+.section--leadership {
+  margin-bottom: 8.5rem;
+}
+
+.leadership {
+  &__heading {
+    max-width: 14rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.leaders {
+}
+
+.person {
+  margin-bottom: 2.5rem;
+
+  &__img {
+    margin-bottom: 1.3rem;
+  }
+
+  &__socials {
+    & svg {
+      color: $very-dark-blue;
+      font-size: 1.5rem;
+    }
+
+    & > * + * {
+      margin-left: 2rem;
+    }
+  }
+
+  &__info {
+  }
+
+  &__name {
+    margin-bottom: 0.2rem;
+  }
+
+  &__job {
+    margin-bottom: 0.2rem;
+  }
+}
