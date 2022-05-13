@@ -19,11 +19,11 @@ const AboutHeader = ({
           </picture>
         </div>
         <div className="about-content">
-          <div className="dash"></div>
           <h1 className="heading-large about-content__heading">
             {headingLarge}
           </h1>
           <div className="about-minicontent">
+            <div className="dash"></div>
             <h2 className="about-minicontent__heading-small">{headingSmall}</h2>
             <p className="about-minicontent__text">{text}</p>
           </div>

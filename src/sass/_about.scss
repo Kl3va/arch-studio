@@ -10,13 +10,34 @@
 .content-box {
   margin-inline: 2rem;
   max-width: 100%;
+
+  @media only screen and (min-width: $breakpoint-medium) {
+    margin-inline: 6rem;
+  }
 }
 
 //HEADER SECTION
 .about-hero {
+  position: relative;
+
+  @media only screen and (min-width: $breakpoint-medium) {
+    margin-inline: 6rem;
+  }
+
+  &__image-box {
+    @media only screen and (min-width: $breakpoint-larger) {
+      width: 60%;
+    }
+  }
+
   &__picture {
     & > img {
       @include imagestyle();
+      filter: brightness(85%);
+
+      @media only screen and (min-width: $breakpoint-small) {
+        height: 45rem;
+      }
     }
   }
 }
@@ -30,21 +51,65 @@
   padding-top: 4.68rem;
   padding-left: 2rem;
 
-  & > .dash {
-    display: none;
+  @media only screen and (min-width: $breakpoint-medium) {
+    padding-left: 3.68rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  @media only screen and (min-width: $breakpoint-larger) {
+    width: 57%;
+    //padding-left: 6rem;
+    //padding-top: 5.5rem;
   }
 
   &__heading {
     display: none;
+
+    @media only screen and (min-width: $breakpoint-medium) {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: -5rem;
+    }
+
+    @media only screen and (min-width: $breakpoint-larger) {
+      top: -7rem;
+    }
   }
 }
 
 .about-minicontent {
+  @media only screen and (min-width: $breakpoint-larger) {
+    max-width: fit-content;
+  }
+
+  & > .dash {
+    display: none;
+
+    @media only screen and (min-width: $breakpoint-medium) {
+      display: block;
+      margin-bottom: 4rem;
+    }
+  }
+
   &__heading-small {
     margin-bottom: 0.5rem;
+
+    @media only screen and (min-width: $breakpoint-medium) {
+      margin-bottom: 2.18rem;
+    }
+
+    @media only screen and (min-width: $breakpoint-larger) {
+      max-width: 26rem;
+    }
   }
 
   &__text {
+    @media only screen and (min-width: $breakpoint-larger) {
+      max-width: 36ch;
+    }
   }
 }
 
@@ -95,13 +160,26 @@
 }
 
 .leaders {
+  @media only screen and (min-width: $breakpoint-smaller) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 2.5rem 1.87rem;
+  }
 }
 
 .person {
   margin-bottom: 2.5rem;
 
+  @media only screen and (min-width: $breakpoint-smaller) {
+    flex-basis: 50%;
+    margin-bottom: 0;
+  }
+
   &__img {
     margin-bottom: 1.3rem;
+    width: 100%;
+    object-fit: cover;
   }
 
   &__socials {
