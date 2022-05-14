@@ -60,6 +60,9 @@
 
   @media only screen and (min-width: $breakpoint-larger) {
     width: 57%;
+
+    display: flex;
+    flex-direction: column;
     //padding-left: 6rem;
     //padding-top: 5.5rem;
   }
@@ -83,6 +86,7 @@
 .about-minicontent {
   @media only screen and (min-width: $breakpoint-larger) {
     max-width: fit-content;
+    align-self: flex-end;
   }
 
   & > .dash {
@@ -91,6 +95,10 @@
     @media only screen and (min-width: $breakpoint-medium) {
       display: block;
       margin-bottom: 4rem;
+    }
+
+    @media only screen and (min-width: $breakpoint-larger) {
+      margin-top: 5.5rem;
     }
   }
 
@@ -117,24 +125,46 @@
 //HERITAGE SECTION
 .section--heritage {
   margin: 4.5rem 0;
+
+  @media only screen and (min-width: $breakpoint-larger) {
+    margin: 12.5rem 0;
+  }
 }
 
 .heritage {
+  @media only screen and (min-width: $breakpoint-largest) {
+    display: flex;
+    justify-content: space-between;
+    //gap: 7.75rem;
+  }
+
   &__box {
     & > .dash {
       margin-bottom: 4.25rem;
+
+      @media only screen and (min-width: $breakpoint-larger) {
+        margin-bottom: 6.25rem;
+      }
     }
   }
 
   &__heading {
     max-width: 14.5rem;
     margin-bottom: 1.8rem;
+
+    @media only screen and (min-width: $breakpoint-larger) {
+      margin-bottom: 3.5rem;
+    }
   }
 
   &__text-group {
   }
 
   &__text {
+    @media only screen and (min-width: $breakpoint-largest) {
+      max-width: 36ch;
+    }
+
     &:not(:last-child) {
       margin-bottom: 1rem;
     }
@@ -142,6 +172,13 @@
 
   &__img-box {
     display: none;
+
+    @media only screen and (min-width: $breakpoint-largest) {
+      display: block;
+      max-width: 33.75rem;
+      //max-width: 46%;
+    }
+
     & > img {
     }
   }
@@ -153,6 +190,11 @@
 }
 
 .leadership {
+  @media only screen and (min-width: $breakpoint-larger) {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__heading {
     max-width: 14rem;
     margin-bottom: 4rem;
@@ -166,6 +208,10 @@
     grid-template-rows: auto;
     grid-gap: 2.5rem 1.87rem;
   }
+
+  @media only screen and (min-width: $breakpoint-larger) {
+    flex-basis: 65%;
+  }
 }
 
 .person {
@@ -176,16 +222,52 @@
     margin-bottom: 0;
   }
 
+  @media only screen and (min-width: $breakpoint-larger) {
+    display: grid;
+  }
+
   &__img {
     margin-bottom: 1.3rem;
     width: 100%;
     object-fit: cover;
+    transition: all ease-in 0.2s;
+
+    @media only screen and (min-width: $breakpoint-larger) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      z-index: 2;
+
+      &:hover {
+        //visibility: visible;
+        //display: block;
+        filter: brightness(75%);
+      }
+
+      &:hover ~ .person__socials {
+        //visibility: visible;
+        display: block;
+      }
+    }
   }
 
   &__socials {
+    @media only screen and (min-width: $breakpoint-larger) {
+      display: none;
+      //visibility: hidden;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      align-self: center;
+      justify-self: center;
+      z-index: 5;
+    }
+
     & svg {
       color: $very-dark-blue;
       font-size: 1.5rem;
+
+      @media only screen and (min-width: $breakpoint-larger) {
+        color: $color-primary;
+      }
     }
 
     & > * + * {
