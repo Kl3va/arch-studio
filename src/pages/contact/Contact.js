@@ -1,10 +1,12 @@
 import React from "react";
+import AsideInfo from "../home/AsideInfo";
 
 const Contact = () => {
   return (
-    <div>
+    <>
+      <AsideInfo text="contact" />
       <p>Contact</p>
-    </div>
+    </>
   );
 };
 
