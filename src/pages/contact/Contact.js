@@ -5,7 +5,9 @@ const Contact = () => {
   return (
     <>
       <AsideInfo text="contact" />
-      <p>Contact</p>
+      <main>
+        <p>Contact</p>
+      </main>
     </>
   );
 };

@@ -48,3 +48,12 @@ export const mapImages = {
   mapImgTablet: mapTablet,
   mapImgMobile: mapMobile,
 };
+
+//Form Validation section
+export const formSection = {
+  primaryHeading: "Connect with us",
+  nameInputPlaceholder: "Name",
+  emailInputPlaceholder: "Email",
+  messageInputPlaceholder: "Message",
+  errorMessageEmpty: "Can't be empty",
+};
