@@ -52,8 +52,8 @@ export const mapImages = {
 //Form Validation section
 export const formSection = {
   primaryHeading: "Connect with us",
-  nameInputPlaceholder: "Name",
-  emailInputPlaceholder: "Email",
-  messageInputPlaceholder: "Message",
-  errorMessageEmpty: "Can't be empty",
+  namePlaceholder: "Name",
+  emailPlaceholder: "Email",
+  messagePlaceholder: "Message",
+  errorMessage: "Can't be empty",
 };
