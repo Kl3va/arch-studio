@@ -1,0 +1,82 @@
+@import "base";
+
+/////////////CONTACT PAGE STYLING
+//ContactDetails section
+.section--details {
+  margin: 4.5rem 0;
+
+  @media only screen and (min-width: $breakpoint-larger) {
+    margin: 12.5rem 0;
+  }
+}
+
+.details {
+  & > .dash {
+  }
+
+  &__heading {
+    margin-bottom: 3rem;
+  }
+}
+
+.main-details {
+}
+
+.locations {
+  & > *:first-child {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.official-contact {
+}
+
+.primary-contact {
+  &__heading {
+    margin-bottom: 1.4rem;
+  }
+}
+
+.public-info {
+  & > *:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+
+  &__mail {
+  }
+
+  &__address {
+  }
+
+  &__phone {
+  }
+}
+
+.map-view {
+  color: $very-dark-blue;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+
+  &__text {
+  }
+}
+
+//MAPPING SECTION
+.section--map {
+  margin-bottom: 4.5rem;
+}
+
+.mapping {
+  max-width: 100%;
+
+  @media only screen and (min-width: $breakpoint-medium) {
+    margin-inline: 6rem;
+  }
+
+  &__picture {
+    width: 100%;
+  }
+}
+
+////FORM SECTION

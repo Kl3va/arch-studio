@@ -5,6 +5,7 @@
   width: 4rem;
   height: 1px;
   background-color: $light-grey;
+  margin-bottom: 4.25rem;
 }
 
 .content-box {
@@ -140,8 +141,6 @@
 
   &__box {
     & > .dash {
-      margin-bottom: 4.25rem;
-
       @media only screen and (min-width: $breakpoint-larger) {
         margin-bottom: 6.25rem;
       }

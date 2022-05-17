@@ -3,7 +3,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 
 const ContactDetailsSection = ({ primaryHeading, locations }) => {
   return (
-    <section>
+    <section className="section--details">
       <div className="content-box">
         <div className="details">
           <div className="dash"></div>
@@ -21,13 +21,15 @@ const ContactDetailsSection = ({ primaryHeading, locations }) => {
                         <h3 className="primary-contact__heading">
                           {mainOffice}
                         </h3>
-                        <p className="primary-contact__mail">{mailBox}</p>
-                        <p className="primary-contact__address">{address}</p>
-                        <p className="primary-contact__phone">{phoneNumber}</p>
+                        <div className="public-info">
+                          <p className="public-info__mail">{mailBox}</p>
+                          <p className="public-info__address">{address}</p>
+                          <p className="public-info__phone">{phoneNumber}</p>
+                        </div>
                       </div>
                       <div className="map-view">
                         <p className="map-view__text">{mapView}</p>
-                        <BsArrowRightShort className="icon-white" />
+                        <BsArrowRightShort className="icon-arrow" />
                       </div>
                     </div>
                   );
