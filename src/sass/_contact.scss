@@ -16,19 +16,49 @@
 
   &__heading {
     margin-bottom: 3rem;
+
+    @media only screen and (min-width: $breakpoint-larger) {
+      max-width: 6ch;
+    }
   }
 }
 
 .main-details {
+  @media only screen and (min-width: $breakpoint-larger) {
+    display: flex;
+
+    justify-content: space-between;
+  }
 }
 
 .locations {
   & > *:first-child {
     margin-bottom: 2.5rem;
+
+    @media only screen and (min-width: $breakpoint-larger) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media only screen and (min-width: $breakpoint-larger) {
+    flex-basis: 65%;
+    justify-self: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
   }
 }
 
 .official-contact {
+  @media only screen and (min-width: $breakpoint-small) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media only screen and (min-width: $breakpoint-larger) {
+    flex-direction: column;
+    flex-basis: 100%;
+  }
 }
 
 .primary-contact {
@@ -58,6 +88,15 @@
   display: flex;
   align-items: center;
 
+  @media only screen and (min-width: $breakpoint-small) {
+    align-self: center;
+    margin-top: 2rem;
+  }
+
+  @media only screen and (min-width: $breakpoint-larger) {
+    align-self: flex-start;
+  }
+
   &__text {
   }
 }
@@ -65,6 +104,10 @@
 //MAPPING SECTION
 .section--map {
   margin-bottom: 4.5rem;
+
+  @media only screen and (min-width: $breakpoint-larger) {
+    margin-bottom: 10rem;
+  }
 }
 
 .mapping {
