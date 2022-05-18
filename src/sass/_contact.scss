@@ -80,3 +80,92 @@
 }
 
 ////FORM SECTION
+.section--form {
+  margin-bottom: 8.5rem;
+}
+
+.form-validation {
+  margin-inline: 2rem;
+  max-width: 100%;
+
+  @media only screen and (min-width: $breakpoint-medium) {
+    margin-inline: 6rem;
+  }
+
+  @media only screen and (min-width: $breakpoint-larger) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    max-width: 15rem;
+    margin-bottom: 3rem;
+
+    @media only screen and (min-width: $breakpoint-smaller) {
+      max-width: 100%;
+    }
+
+    @media only screen and (min-width: $breakpoint-larger) {
+      max-width: 6ch;
+    }
+  }
+}
+
+.form {
+  display: grid;
+
+  @media only screen and (min-width: $breakpoint-larger) {
+    flex-basis: 65%;
+  }
+
+  & > .btn-large {
+    justify-self: end;
+    align-self: end;
+    //margin-top: -0.3rem;
+  }
+}
+
+.wrapper {
+  position: relative;
+  font-weight: 700;
+
+  &:not(:last-of-type) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.field,
+.text-area {
+  width: 100%;
+  font-weight: inherit;
+  color: $very-dark-blue;
+  padding-left: 1.3rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid $very-dark-blue;
+
+  &::placeholder {
+    color: $light-grey;
+  }
+
+  &:focus {
+    color: $very-dark-blue;
+    border-bottom: 2px solid $very-dark-blue;
+  }
+}
+
+.field {
+  height: 3.5rem;
+}
+
+.error {
+  position: absolute;
+  font-weight: inherit;
+  right: 0;
+  bottom: 0.5rem;
+  color: $color-error;
+}
+
+.text-area {
+  height: 100%;
+}

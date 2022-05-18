@@ -1,6 +1,6 @@
 import React from "react";
 import { BsArrowRightShort } from "react-icons/bs";
-import Button from "../button";
+//import Button from "../button";
 
 const FormSection = ({
   primaryHeading,
@@ -10,32 +10,47 @@ const FormSection = ({
   errorMessage,
 }) => {
   return (
-    <section>
+    <section className="section--form">
       <div className="form-validation">
         <h2 className="form-validation__heading">{primaryHeading}</h2>
-        <form>
-          <input
-            type="text"
-            name="person"
-            id="person"
-            placeholder={namePlaceholder}
-          />
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder={emailPlaceholder}
-          />
-          <textarea
-            name="message"
-            id="message"
-            cols="20"
-            rows="5"
-            placeholder={messagePlaceholder}
-          ></textarea>
-          <Button className="btn-large">
+        <form className="form">
+          <div className="wrapper">
+            <input
+              type="text"
+              name="person"
+              id="person"
+              className="field"
+              placeholder={namePlaceholder}
+            />
+            <p className="error">{errorMessage}</p>
+          </div>
+
+          <div className="wrapper">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              className="field"
+              placeholder={emailPlaceholder}
+            />
+            <p className="error">{errorMessage}</p>
+          </div>
+
+          <div className="wrapper">
+            <textarea
+              name="message"
+              id="message"
+              className="text-area"
+              cols="20"
+              rows="4"
+              placeholder={messagePlaceholder}
+            ></textarea>
+            <p className="error">{errorMessage}</p>
+          </div>
+
+          <button className="btn-large">
             <BsArrowRightShort className="icon-arrow" />
-          </Button>
+          </button>
         </form>
       </div>
     </section>
