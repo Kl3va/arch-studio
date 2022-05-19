@@ -7,7 +7,6 @@ import FormSection from "./FormSection";
 import {
   contactHeroSection,
   contactDetailsSection,
-  mapImages,
   formSection,
 } from "../../data/contactData/contactData";
 
@@ -18,7 +17,7 @@ const Contact = () => {
       <AboutHeader {...contactHeroSection} />
       <main>
         <ContactDetailsSection {...contactDetailsSection} />
-        <MapSection {...mapImages} />
+        <MapSection />
         <FormSection {...formSection} />
       </main>
     </>

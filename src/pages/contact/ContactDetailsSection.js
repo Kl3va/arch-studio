@@ -1,7 +1,13 @@
 import React from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import { BsArrowRightShort } from "react-icons/bs";
 
 const ContactDetailsSection = ({ primaryHeading, locations }) => {
+  const moveTo = (index) => {
+    // console.log(e.target);
+    console.log(`this is the btn ${index}`);
+  };
+
   return (
     <section className="section--details">
       <div className="content-box">
@@ -27,9 +33,17 @@ const ContactDetailsSection = ({ primaryHeading, locations }) => {
                           <p className="public-info__phone">{phoneNumber}</p>
                         </div>
                       </div>
-                      <div className="map-view">
-                        <p className="map-view__text">{mapView}</p>
-                        <BsArrowRightShort className="icon-arrow" />
+                      <div
+                        className="map-view"
+                        onClick={(e) => {
+                          moveTo(index);
+                          console.log(e.target);
+                        }}
+                      >
+                        <Link to="#leaflet-map">
+                          <p className="map-view__text">{mapView}</p>
+                          <BsArrowRightShort className="icon-arrow" />
+                        </Link>
                       </div>
                     </div>
                   );

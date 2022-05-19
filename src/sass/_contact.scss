@@ -85,8 +85,8 @@
 .map-view {
   color: $very-dark-blue;
   font-weight: 700;
-  display: flex;
-  align-items: center;
+  cursor: pointer;
+  width: fit-content;
 
   @media only screen and (min-width: $breakpoint-small) {
     align-self: center;
@@ -95,6 +95,17 @@
 
   @media only screen and (min-width: $breakpoint-larger) {
     align-self: flex-start;
+  }
+
+  & > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__text {
@@ -112,14 +123,20 @@
 
 .mapping {
   max-width: 100%;
+  aspect-ratio: 1 / 1;
+  //background-color: black;
 
   @media only screen and (min-width: $breakpoint-medium) {
     margin-inline: 6rem;
   }
 
-  &__picture {
-    width: 100%;
+  @media only screen and (min-width: $breakpoint-large) {
+    aspect-ratio: 1 / 0.5;
   }
+
+  /* &__picture {
+    width: 100%;
+  } */
 }
 
 ////FORM SECTION

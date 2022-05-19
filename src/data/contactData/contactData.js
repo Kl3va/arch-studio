@@ -5,11 +5,6 @@ import heroDesktop from "../../starter-code/assets/contact/desktop/image-hero.jp
 import heroTablet from "../../starter-code/assets/contact/tablet/image-hero.jpg";
 import heroMobile from "../../starter-code/assets/contact/mobile/image-hero.jpg";
 
-//Map
-import mapDesktop from "../../starter-code/assets/contact/desktop/image-map.png";
-import mapTablet from "../../starter-code/assets/contact/tablet/image-map.png";
-import mapMobile from "../../starter-code/assets/contact/mobile/image-map.png";
-
 ////SECTIONS
 //HERO section
 export const contactHeroSection = {
@@ -31,6 +26,7 @@ export const contactDetailsSection = {
       address: "Address: 1892 Chenoweth Drive TN",
       phoneNumber: "Phone: 123-456-3451",
       mapView: "View on Map",
+      coord: [35.95246, -83.97153],
     },
     {
       mainOffice: "Office II",
@@ -38,15 +34,9 @@ export const contactDetailsSection = {
       address: "Address: 3399 Wines Lane TX",
       phoneNumber: "Phone: 832-123-4321",
       mapView: "View on Map",
+      coord: [29.89743, -97.827507],
     },
   ],
-};
-
-//Map section
-export const mapImages = {
-  mapImgDesktop: mapDesktop,
-  mapImgTablet: mapTablet,
-  mapImgMobile: mapMobile,
 };
 
 //Form Validation section
