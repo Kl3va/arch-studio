@@ -5,6 +5,7 @@ import { contactDetailsSection } from "../../data/contactData/contactData";
 const MapSection = () => {
   const { locations } = contactDetailsSection;
 
+
   return (
     <section className="section--map" id="leaflet-map">
       <div className="mapping">

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsArrowRightShort } from "react-icons/bs";
+//import { useFormik } from "formik";
 //import Button from "../button";
 
 const FormSection = ({
@@ -7,45 +8,74 @@ const FormSection = ({
   namePlaceholder,
   emailPlaceholder,
   messagePlaceholder,
-  errorMessage,
 }) => {
+  const [person, setPerson] = useState({
+    fullName: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setPerson({ ...person, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // if (person.fullName && person.email && person.message) {
+    // console.log(person);
+
+    // return setPerson({ fullName: "", email: "", message: "" });
+    // }
+    // else {
+    // setErrors(validate(person));
+    // }
+  };
+
   return (
     <section className="section--form">
       <div className="form-validation">
         <h2 className="form-validation__heading">{primaryHeading}</h2>
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit}>
           <div className="wrapper">
             <input
               type="text"
-              name="person"
-              id="person"
+              value={person.fullName}
+              name="fullName"
+              id="fullName"
               className="field"
               placeholder={namePlaceholder}
+              onChange={handleChange}
             />
-            <p className="error">{errorMessage}</p>
+            {/**errors.fullName && <p className="error">{errors.fullName}</p>**/}
           </div>
 
           <div className="wrapper">
             <input
               type="email"
+              value={person.email}
               name="email"
               id="email"
               className="field"
               placeholder={emailPlaceholder}
+              onChange={handleChange}
             />
-            <p className="error">{errorMessage}</p>
+            {/**!person.email ? null : <p className="error">{errorMessage}</p>**/}
           </div>
 
           <div className="wrapper">
             <textarea
               name="message"
+              value={person.message}
               id="message"
               className="text-area"
               cols="20"
               rows="4"
               placeholder={messagePlaceholder}
+              onChange={handleChange}
             ></textarea>
-            <p className="error">{errorMessage}</p>
+            {/**!person.message ? null : <p className="error">{errorMessage}</p>**/}
           </div>
 
           <button className="btn-large">

@@ -45,5 +45,4 @@ export const formSection = {
   namePlaceholder: "Name",
   emailPlaceholder: "Email",
   messagePlaceholder: "Message",
-  errorMessage: "Can't be empty",
 };

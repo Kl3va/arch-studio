@@ -6,6 +6,7 @@ import Contact from "./pages/contact/Contact";
 import Portfolio from "./pages/portfolio/Portfolio";
 import Navbar from "./pages/home/Navbar";
 import Footer from "./pages/home/Footer";
+import Sidebar from "./pages/Sidebar";
 
 import { navbar, footer } from "./data/homeData/homeData";
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <Router>
       <Navbar {...navbar} />
+      <Sidebar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
