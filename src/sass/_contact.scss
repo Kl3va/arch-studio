@@ -214,6 +214,10 @@
   }
 }
 
+.invalid {
+  border-bottom: 1px solid $color-error;
+}
+
 .field {
   height: 3.5rem;
 }
