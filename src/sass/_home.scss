@@ -38,8 +38,21 @@
   gap: Max(5.25rem, calc(7vw + 0.5rem));
   padding: 3.7rem 0;
 
+  @media only screen and (max-width: $breakpoint-small) {
+    justify-content: space-between;
+  }
+
   &__logo {
     flex: 0 auto;
+  }
+
+  &__icon {
+    display: none;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      display: flex;
+      align-self: center;
+    }
   }
 
   &__link {

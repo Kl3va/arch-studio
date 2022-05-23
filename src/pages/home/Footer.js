@@ -6,9 +6,14 @@ import { navbar } from "../../data/homeData/homeData";
 
 const Footer = ({ btnText, logo }) => {
   const { page } = navbar.navigation[0];
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer className="footer-main">
-      <div className="footer">
+      <div className="footer" onClick={scrollToTop}>
         <div className="footer__logo">
           <img src={logo} alt="footer" />
         </div>

@@ -43,6 +43,10 @@ import navLogo from "../../starter-code/assets/logo.svg";
 //Footer Logo
 import footerLogo from "../../starter-code/assets/logo-footer.svg";
 
+//ICONS for navbar(mobile)
+import iconClose from "../../starter-code/assets/icons/icon-close.svg";
+import iconOpen from "../../starter-code/assets/icons/icon-hamburger.svg";
+
 //HEADER DATA
 export const header = {
   btnText: "See Our Portfolio",
@@ -139,6 +143,8 @@ export const featured = {
 //Data for navigation bar
 export const navbar = {
   logo: navLogo,
+  iconClose,
+  iconOpen,
   navigation: [
     {
       link: "Portfolio",

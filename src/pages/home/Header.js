@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BsArrowRightShort } from "react-icons/bs";
 import Button from "../button";
 import { navbar } from "../../data/homeData/homeData";
@@ -6,6 +6,23 @@ import { navbar } from "../../data/homeData/homeData";
 const Header = ({ btnText, btnGroupText, mainContents }) => {
   //Tab switching
   const [value, setValue] = useState(0);
+
+  const checkIndex = (number) => {
+    if (number > mainContents.length - 1) {
+      return 0;
+    }
+    return number;
+  };
+
+  useEffect(() => {
+    let index = setInterval(() => {
+      setValue(checkIndex(value + 1));
+    }, 3000);
+
+    return () => {
+      clearInterval(index);
+    };
+  });
 
   //Navigating to the portfolio page
   const { page } = navbar.navigation[0];
