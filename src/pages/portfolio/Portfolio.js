@@ -2,15 +2,20 @@ import React from "react";
 import Products from "./Products";
 import { portfolioContents } from "../../data/portfolioData/portfolioData";
 import AsideInfo from "../home/AsideInfo";
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 2 } }}
+    >
       <AsideInfo text="portfolio" />
       <main>
         <Products portfolioContents={portfolioContents} />
       </main>
-    </>
+    </motion.div>
   );
 };
 

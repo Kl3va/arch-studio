@@ -33,6 +33,23 @@
   }
 }
 
+.aside-nav {
+  position: relative;
+  background-color: $color-primary;
+
+  padding-inline: 6rem;
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    padding-inline: 2rem;
+  }
+
+  @media only screen and (max-width: $breakpoint-small) {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+}
+
 .nav {
   display: flex;
   gap: Max(5.25rem, calc(7vw + 0.5rem));
@@ -71,10 +88,12 @@
 
     & a {
       text-decoration: none;
+      position: relative;
       font-weight: 700;
       display: block;
       color: $medium-grey;
       transition: color ease-in 0.2s;
+      z-index: 3;
 
       &:hover {
         color: $very-dark-blue;
@@ -83,8 +102,73 @@
   }
 }
 
+//SIDEBAR
+.sidebar {
+  position: fixed;
+  right: 0;
+  z-index: 150;
+  width: Min(92%, 33.75rem);
+  aspect-ratio: 1 / 0.6;
+  color: $very-dark-blue;
+  background-color: $light-grey;
+  padding: 3rem;
+  transition: all ease-in 0.2s;
+  transform: translate(100%);
+
+  @media only screen and (min-width: $breakpoint-mid) {
+    display: none;
+  }
+
+  &__link {
+    list-style: none;
+    width: fit-content;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__items {
+    & a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      font-weight: 700;
+    }
+  }
+}
+
+.show-sidebar {
+  transform: translate(0);
+}
+
+//BACKGROUND CONTENT
+.navigation-background {
+  position: fixed;
+  top: 0;
+  //left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(37, 43, 70, 0.953);
+  -webkit-backdrop-filter: blur(0.5px);
+  z-index: 100;
+  //visibility: hidden;
+  display: none;
+  transition: all ease-in 0.2s;
+
+  @media only screen and (min-width: $breakpoint-mid) {
+    display: none;
+  }
+}
+
+.show-background {
+  //visibility: visible;
+  display: block;
+}
+
 //CONTENT IN THE CENTER
-.aside-nav,
+//.aside-nav,
 .header,
 .footer-main {
   margin-inline: 6rem;

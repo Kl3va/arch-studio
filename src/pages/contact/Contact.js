@@ -9,10 +9,15 @@ import {
   contactDetailsSection,
   formSection,
 } from "../../data/contactData/contactData";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 2 } }}
+    >
       <AsideInfo text="contact" />
       <AboutHeader {...contactHeroSection} />
       <main>
@@ -20,7 +25,7 @@ const Contact = () => {
         <MapSection />
         <FormSection {...formSection} />
       </main>
-    </>
+    </motion.div>
   );
 };
 

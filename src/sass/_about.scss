@@ -113,6 +113,11 @@
     @media only screen and (min-width: $breakpoint-larger) {
       max-width: 26rem;
     }
+
+    //Dummy code cause it causes a horizontal scroll on widths < 300px
+    @media only screen and (max-width: 300px) {
+      font-size: 2rem;
+    }
   }
 
   &__text {
